@@ -35,7 +35,16 @@ This project implements a campus/industrial vehicle record system using computer
    Edit `config/config.yaml` to set camera sources, database paths, detection zones, etc.
 
 ## Usage
-To start the application, run:
+
+**1. Run the Detection System:**
+To start the computer vision application, run:
 ```bash
 python src/main.py
 ```
+
+**2. View the Live Dashboard:**
+To view real-time logs and stats, open a new terminal and run:
+```bash
+python dashboard.py
+```
+Then, open your web browser and navigate to: **[http://localhost:8080](http://localhost:8080)**
