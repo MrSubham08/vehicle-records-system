@@ -1,0 +1,39 @@
+# --- Core Libraries ---
+opencv-python-headless  # Use this if you don't need OpenCV GUI windows (e.g., server)
+# opencv-python         # Use this if you need cv2.imshow() and other GUI functions
+numpy                   # Required by OpenCV and often for array manipulations
+PyYAML                  # For reading the config.yaml file
+
+# --- Computer Vision Models/Libraries (Choose based on your implementation) ---
+
+# Option 1: Using Ultralytics YOLO for Detection
+ultralytics             # Installs YOLOv8 and its dependencies
+
+# Option 2: Using EasyOCR for License Plate Recognition (LPR)
+easyocr                 # Installs EasyOCR and its dependencies
+
+# --- Deep Learning Framework (Required by Ultralytics & EasyOCR) ---
+# IMPORTANT: Installing PyTorch via pip might only install the CPU version.
+# For GPU support (highly recommended for performance), follow the official
+# PyTorch installation guide for your specific OS and CUDA version:
+# https://pytorch.org/get-started/locally/
+torch
+torchvision
+torchaudio
+
+# --- Alternative LPR (If using Tesseract instead of EasyOCR) ---
+# pytesseract           # Python wrapper for Tesseract
+# Pillow                # Required by pytesseract for image handling
+# NOTE: If using pytesseract, you MUST also install the Tesseract OCR engine
+# separately on your operating system. See Tesseract documentation.
+
+# --- Optional (If implementing more advanced tracking) ---
+# filterpy              # For Kalman filters, often used in trackers like SORT
+# scipy                 # Often needed for optimization/linear algebra in trackers
+
+# --- Optional (For potential web dashboard) ---
+# Flask                 # Example web framework
+# Jinja2                # Template engine for Flask
+
+# --- Optional (For testing frameworks) ---
+# pytest                # Popular testing framework (alternative to unittest)

@@ -1,0 +1,27 @@
+# --- Database Configuration ---
+database:
+  type: sqlite
+  path: vehicle_log.db
+
+# --- Camera Configuration ---
+cameras:
+  - id: traffic_cam_01
+    source: "data/parking_video.mp4"
+    # Video is 640x360.
+    # Entry zone = top strip of road (vehicles coming in from top of frame)
+    # Exit  zone = bottom strip of road (vehicles leaving at bottom)
+    entry_zone: [80, 30, 560, 130]   # [x1, y1, x2, y2]
+    exit_zone:  [80, 240, 560, 340]  # [x1, y1, x2, y2]
+
+# --- Computer Vision Settings ---
+vision:
+  # YOLOv8n model — auto-downloaded by Ultralytics on first run
+  detector_model_path: 'yolov8n.pt'
+  detection_confidence_threshold: 0.35
+
+  # License Plate Recognition — set false to skip OCR (faster)
+  lpr_enabled: false
+
+# --- Logging Configuration ---
+logging:
+  level: INFO
